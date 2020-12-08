@@ -77,37 +77,19 @@
 		<div class="homeslider">
 			<div class="swiper-container">
 
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<img src="images/slider/poster2.jpg">
-						<div class="caption">
-							<div class="captioninside">
-								<h3>Movie Title</h3>
-								<p>Lorem ipsum dolor siamet</p>
-								<a href="single.html" class="playbutton">Play</a>
+				<div class="swiper-wrapper"
+							<div class="swiper-slide">
+								{% if slider_movies.banner %}
+								   <img src="{{slider_movies.banner.url}}">
+								{% endif %}
+								<div class="caption">
+									<div class="captioninside">
+										<h3>{{slider_movies.title}}</h3>
+										<p>{{slider_movies.description}}</p>
+										<a href="{% url 'movies:movie_detail' slider_movies.slug %}" class="playbutton">Play</a>
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<img src="images/slider/poster1.jpg">
-						<div class="caption">
-							<div class="captioninside">
-								<h3>Movie Title 2</h3>
-								<p>Lorem ipsum dolor siamet</p>
-								<a href="single.html" class="playbutton">Play</a>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<img src="images/slider/poster2.jpg">
-						<div class="caption">
-							<div class="captioninside">
-								<h3>Movie Title 3</h3>
-								<p>Lorem ipsum dolor siamet</p>
-								<a href="single.html" class="playbutton">Play</a>
-							</div>
-						</div>
-					</div>
 				</div>
 				<!-- Add Pagination -->
 				<div class="swiper-pagination"></div>
