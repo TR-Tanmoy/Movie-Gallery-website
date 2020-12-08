@@ -39,10 +39,17 @@
 					</li>
 					<li><a>Year</a>
 						<ul>
-							<li><a href="year.html">2017</a></li>
-							<li><a href="year.html">2016</a></li>
-							<li><a href="year.html">2015</a></li>
-							<li><a href="year.html">2014</a></li>
+							<li><a href="{% url 'movies:movie_year' year=2010 %}">2010</a></li>
+							<li><a href="{% url 'movies:movie_year' year=2011 %}">2011</a></li>
+							<li><a href="{% url 'movies:movie_year' year=2012 %}">2012</a></li>
+							<li><a href="{% url 'movies:movie_year' year=2013 %}">2013</a></li>
+							<li><a href="{% url 'movies:movie_year' year=2014 %}">2014</a></li>
+							<li><a href="{% url 'movies:movie_year' year=2015 %}">2015</a></li>
+							<li><a href="{% url 'movies:movie_year' year=2016 %}">2016</a></li>
+							<li><a href="{% url 'movies:movie_year' year=2017 %}">2017</a></li>
+							<li><a href="{% url 'movies:movie_year' year=2018 %}">2018</a></li>
+							<li><a href="{% url 'movies:movie_year' year=2019 %}">2019</a></li>
+							<li><a href="{% url 'movies:movie_year' year=2020 %}">2020</a></li>
 						</ul>
 					</li>
 					<li><a>Language</a>
