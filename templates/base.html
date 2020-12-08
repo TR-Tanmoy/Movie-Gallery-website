@@ -52,15 +52,15 @@
 						</ul>
 					</li>
 					<li class="mobsearch">
-						<form class="mobform">
-							<input type="text" name="s" class="mobsearchfield" placeholder="Search...">
+						<form class="mobform"  method = "GET">
+							<input type="text" name="query"  value = "{{ request.GET.q }}" class="mobsearchfield" placeholder="Search...">
 							<input type="submit" value="" class="mobsearchsubmit">
 						</form>
 					</li>
 				</ul>
 			</nav>
-			<form class="search">
-				<input type="text" name="s" class="searchfield" placeholder="Search...">
+			<form class="search" method = "GET" action="{% url 'movies:movie_search' %}">
+				<input type="text" name="query" value = "{{ request.GET.q }}" class="searchfield" placeholder="Search...">
 				<input type="submit" value="" class="searchsubmit">
 			</form>
 
