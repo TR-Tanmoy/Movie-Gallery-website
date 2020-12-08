@@ -1,6 +1,6 @@
 
 from django.urls import path
-from .views import MovieList, MovieDetail, MovieCategory
+from .views import MovieList, MovieDetail, MovieCategory, MovieLanguage
 
 
 app_name='movie'
@@ -8,5 +8,6 @@ app_name='movie'
 urlpatterns = [
     path('', MovieList.as_view(), name='movie_list'),
     path('category/<str:category>', MovieCategory.as_view(), name='movie_category'),
+    path('language/<str:lang>', MovieLanguage.as_view(), name='movie_language'),
     path('<int:pk>', MovieDetail.as_view(), name='movie_detail'),
 ]
