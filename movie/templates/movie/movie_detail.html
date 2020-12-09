@@ -45,12 +45,12 @@
 
 				<section class="related">
 					<h3>Related movies</h3>
-					{% for movie in related_movies %}
-							<div class="relatemovie">
-								<a href="{% url 'movies:movie_detail' movie.slug %}"><img src="{{movie.image.url}}"></a>
-								<a href="{% url 'movies:movie_detail' movie.slug %}"><span class="relatedname">{{movie.title}}</span></a>
-							</div>
-					{% endfor %}
+							{% for movie in related_movies %}
+									<div class="relatemovie">
+										<a href="{% url 'movies:movie_detail' movie.slug %}"><img src="{{movie.image.url}}"></a>
+										<a href="{% url 'movies:movie_detail' movie.slug %}"><span class="relatedname">{{movie.title}}</span></a>
+									</div>
+							 {% endfor %}
 
 				</section>
 
